@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +25,19 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yiS-I5-XvG" id="tjl-R2-tai">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="UyK-jT-AsU" userLabel="CoinLogoImage">
+                                            <rect key="frame" x="0.0" y="0.0" width="43.5" height="43.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="UyK-jT-AsU" secondAttribute="height" multiplier="1:1" id="uyz-xg-tNJ"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="UyK-jT-AsU" firstAttribute="top" secondItem="tjl-R2-tai" secondAttribute="top" id="CHg-0S-kBu"/>
+                                        <constraint firstAttribute="bottom" secondItem="UyK-jT-AsU" secondAttribute="bottom" id="kwg-Pd-zwX"/>
+                                        <constraint firstItem="UyK-jT-AsU" firstAttribute="leading" secondItem="tjl-R2-tai" secondAttribute="leading" id="qXx-CS-pMl"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -33,6 +47,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="CoinChecker" id="Cuu-bt-ByD"/>
+                    <connections>
+                        <outlet property="coinLogoImage" destination="UyK-jT-AsU" id="v5e-5H-CXD"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d10-fE-Crk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,4 +72,7 @@
             <point key="canvasLocation" x="-663" y="31"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bitcoin" width="1500" height="1500"/>
+    </resources>
 </document>

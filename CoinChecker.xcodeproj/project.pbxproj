@@ -13,8 +13,6 @@
 		91E6D7AB2030A2F60007F384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E6D7A92030A2F60007F384 /* LaunchScreen.storyboard */; };
 		91E6D7B62030A2F60007F384 /* CoinCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7B52030A2F60007F384 /* CoinCheckerTests.swift */; };
 		91E6D7C32030A3D30007F384 /* CoinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */; };
-		91E6D7C62030A4F10007F384 /* CryptoCurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7C42030A4F10007F384 /* CryptoCurrencyTableViewCell.swift */; };
-		91E6D7C72030A4F10007F384 /* CryptoCurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91E6D7C52030A4F10007F384 /* CryptoCurrencyTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +36,6 @@
 		91E6D7B52030A2F60007F384 /* CoinCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCheckerTests.swift; sourceTree = "<group>"; };
 		91E6D7B72030A2F60007F384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewController.swift; sourceTree = "<group>"; };
-		91E6D7C42030A4F10007F384 /* CryptoCurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCurrencyTableViewCell.swift; sourceTree = "<group>"; };
-		91E6D7C52030A4F10007F384 /* CryptoCurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CryptoCurrencyTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */,
-				91E6D7C42030A4F10007F384 /* CryptoCurrencyTableViewCell.swift */,
-				91E6D7C52030A4F10007F384 /* CryptoCurrencyTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +198,6 @@
 				91E6D7AB2030A2F60007F384 /* LaunchScreen.storyboard in Resources */,
 				91E6D7A82030A2F60007F384 /* Assets.xcassets in Resources */,
 				91E6D7A62030A2F60007F384 /* Main.storyboard in Resources */,
-				91E6D7C72030A4F10007F384 /* CryptoCurrencyTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,7 +217,6 @@
 			files = (
 				91E6D7C32030A3D30007F384 /* CoinTableViewController.swift in Sources */,
 				91E6D7A12030A2F60007F384 /* AppDelegate.swift in Sources */,
-				91E6D7C62030A4F10007F384 /* CryptoCurrencyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

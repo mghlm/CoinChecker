@@ -9,10 +9,14 @@
 import UIKit
 
 class CoinTableViewController: UITableViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var coinLogoImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
     }
 
     // MARK: - Table view data source
