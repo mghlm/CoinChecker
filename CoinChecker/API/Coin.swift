@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Coin: Codable {
+class Coin: Codable {
     let coinId: String
     let coinName: String
     let symbol: String
