@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--CoinChecker-->
         <scene sceneID="egh-DL-wcr">
             <objects>
-                <tableViewController id="1pW-Qe-PsX" sceneMemberID="viewController">
+                <tableViewController id="1pW-Qe-PsX" customClass="CoinTableViewController" customModule="CoinChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fBO-kJ-8gx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="1pW-Qe-PsX" id="qHd-cd-KB0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Cuu-bt-ByD"/>
+                    <navigationItem key="navigationItem" title="CoinChecker" id="Cuu-bt-ByD"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d10-fE-Crk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
