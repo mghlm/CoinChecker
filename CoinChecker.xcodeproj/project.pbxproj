@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		91E6D7A12030A2F60007F384 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7A02030A2F60007F384 /* AppDelegate.swift */; };
-		91E6D7A32030A2F60007F384 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7A22030A2F60007F384 /* ViewController.swift */; };
 		91E6D7A62030A2F60007F384 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E6D7A42030A2F60007F384 /* Main.storyboard */; };
 		91E6D7A82030A2F60007F384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91E6D7A72030A2F60007F384 /* Assets.xcassets */; };
 		91E6D7AB2030A2F60007F384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E6D7A92030A2F60007F384 /* LaunchScreen.storyboard */; };
 		91E6D7B62030A2F60007F384 /* CoinCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7B52030A2F60007F384 /* CoinCheckerTests.swift */; };
+		91E6D7C32030A3D30007F384 /* CoinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		91E6D79D2030A2F60007F384 /* CoinChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E6D7A02030A2F60007F384 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91E6D7A22030A2F60007F384 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		91E6D7A52030A2F60007F384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91E6D7A72030A2F60007F384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91E6D7AA2030A2F60007F384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		91E6D7B12030A2F60007F384 /* CoinCheckerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoinCheckerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E6D7B52030A2F60007F384 /* CoinCheckerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCheckerTests.swift; sourceTree = "<group>"; };
 		91E6D7B72030A2F60007F384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +77,10 @@
 		91E6D79F2030A2F60007F384 /* CoinChecker */ = {
 			isa = PBXGroup;
 			children = (
-				91E6D7A02030A2F60007F384 /* AppDelegate.swift */,
-				91E6D7A22030A2F60007F384 /* ViewController.swift */,
+				91E6D7C12030A39C0007F384 /* Views */,
 				91E6D7A42030A2F60007F384 /* Main.storyboard */,
 				91E6D7A72030A2F60007F384 /* Assets.xcassets */,
-				91E6D7A92030A2F60007F384 /* LaunchScreen.storyboard */,
-				91E6D7AC2030A2F60007F384 /* Info.plist */,
+				91E6D7C02030A30A0007F384 /* Supporting files */,
 			);
 			path = CoinChecker;
 			sourceTree = "<group>";
@@ -94,6 +92,24 @@
 				91E6D7B72030A2F60007F384 /* Info.plist */,
 			);
 			path = CoinCheckerTests;
+			sourceTree = "<group>";
+		};
+		91E6D7C02030A30A0007F384 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				91E6D7A02030A2F60007F384 /* AppDelegate.swift */,
+				91E6D7A92030A2F60007F384 /* LaunchScreen.storyboard */,
+				91E6D7AC2030A2F60007F384 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		91E6D7C12030A39C0007F384 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				91E6D7C22030A3D30007F384 /* CoinTableViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91E6D7A32030A2F60007F384 /* ViewController.swift in Sources */,
+				91E6D7C32030A3D30007F384 /* CoinTableViewController.swift in Sources */,
 				91E6D7A12030A2F60007F384 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
