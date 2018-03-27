@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+struct CoinCellViewModel {
+    let url: URL
+    let coinName: String
+}

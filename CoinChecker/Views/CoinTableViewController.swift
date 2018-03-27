@@ -10,7 +10,7 @@ import UIKit
 
 class CoinTableViewController: UITableViewController {
     
-    let coinsCollection = ["Bitcoin", "Ethereum"]
+    let coinsCollection = [Coin]()
     
     // MARK: - Outlets
     
@@ -20,6 +20,10 @@ class CoinTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    
+    fileprivate func addCoinsToCoinsCollection() {
+        
+    }
     
     fileprivate func setupUI() {
         tableView.backgroundColor = .gray
@@ -47,7 +51,7 @@ class CoinTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoinTableViewCell", for: indexPath) as! CoinTableViewCell
         cell.backgroundColor = .clear
-        cell.nameLabel.text = "\(coinsCollection[indexPath.row])"
+        cell.nameLabel.text = coinsCollection[indexPath.row].coinName
 
         return cell
     }
