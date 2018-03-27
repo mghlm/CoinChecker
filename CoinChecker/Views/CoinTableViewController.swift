@@ -17,6 +17,7 @@ class CoinTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.register(CoinTableViewCell.self, forCellReuseIdentifier: "CoinTableViewCell")
+        tableView.separatorStyle = .none 
         tableView.reloadData()
     }
 
@@ -30,9 +31,10 @@ class CoinTableViewController: UITableViewController {
         return coinsCollection.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 90
-//    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        self.tableView.estimatedRowHeight = 90
+        return UITableViewAutomaticDimension
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoinTableViewCell", for: indexPath) as! CoinTableViewCell

@@ -53,9 +53,10 @@ class CoinTableViewCell: UITableViewCell {
     
     fileprivate func setupConstraints() {
         nameLabel.snp.makeConstraints { (make) in
+            make.height.equalTo(20)
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(20)
-            make.bottom.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().offset(-20)
         }
     }
 
