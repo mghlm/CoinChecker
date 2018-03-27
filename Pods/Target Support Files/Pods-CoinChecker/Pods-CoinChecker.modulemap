@@ -1,0 +1,6 @@
+framework module Pods_CoinChecker {
+  umbrella header "Pods-CoinChecker-umbrella.h"
+
+  export *
+  module * { export * }
+}
