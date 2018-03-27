@@ -11,18 +11,10 @@ import SnapKit
 
 class CoinTableViewCell: UITableViewCell {
     
-    // MARK: - Private properties
-    
+    var cellView: UIView!
     var coinLogo: UIImageView!
     var nameLabel: UILabel!
     var priceLabel: UILabel!
-    
-    var identifier = "CoinTableViewCell"
-
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        setupUI()
-//    }
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -32,11 +24,7 @@ class CoinTableViewCell: UITableViewCell {
     required init?(coder decoder: NSCoder) {
         super.init(coder: decoder)
     }
-    
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//    }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
@@ -45,18 +33,36 @@ class CoinTableViewCell: UITableViewCell {
     // MARK: - Private methods
     
     fileprivate func setupUI() {
+        cellView = UIView(frame: CGRect.zero)
+        cellView.backgroundColor = .gray
+        cellView.layer.cornerRadius = 15
+        addSubview(cellView)
+        
+        coinLogo = UIImageView(image: #imageLiteral(resourceName: "bitcoin"))
+        cellView.addSubview(coinLogo)
+        
         nameLabel = UILabel()
-        addSubview(nameLabel)
+        cellView.addSubview(nameLabel)
         
         setupConstraints()
     }
     
     fileprivate func setupConstraints() {
-        nameLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(20)
+        cellView.snp.makeConstraints { (make) in
+            make.height.equalTo(80)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.top.equalToSuperview()
+        }
+        coinLogo.snp.makeConstraints { (make) in
+            make.height.equalTo(40)
+            make.width.equalTo(40)
+            make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(20)
-            make.bottom.equalToSuperview().offset(-20)
+        }
+        nameLabel.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.leading.equalTo(coinLogo.snp.trailing).offset(20)
         }
     }
 

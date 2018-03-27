@@ -32,12 +32,12 @@ class CoinTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        self.tableView.estimatedRowHeight = 90
-        return UITableViewAutomaticDimension
+        return 90
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CoinTableViewCell", for: indexPath) as! CoinTableViewCell
+        cell.backgroundColor = .clear
         cell.nameLabel.text = "\(coinsCollection[indexPath.row])"
 
         return cell
