@@ -13,16 +13,29 @@ class CoinTableViewCell: UITableViewCell {
     
     // MARK: - Private properties
     
-    fileprivate var coinLogo: UIImageView!
-    fileprivate var nameLabel: UILabel!
-    fileprivate var priceLabel: UILabel!
+    var coinLogo: UIImageView!
+    var nameLabel: UILabel!
+    var priceLabel: UILabel!
     
     var identifier = "CoinTableViewCell"
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+//    override func awakeFromNib() {
+//        super.awakeFromNib()
+//        setupUI()
+//    }
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
+    
+    required init?(coder decoder: NSCoder) {
+        super.init(coder: decoder)
+    }
+    
+//    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//    }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -33,8 +46,6 @@ class CoinTableViewCell: UITableViewCell {
     
     fileprivate func setupUI() {
         nameLabel = UILabel()
-        nameLabel.text = "Bitcoin"
-        nameLabel.textColor = .black
         addSubview(nameLabel)
         
         setupConstraints()
@@ -42,7 +53,6 @@ class CoinTableViewCell: UITableViewCell {
     
     fileprivate func setupConstraints() {
         nameLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(20)
             make.leading.equalToSuperview().offset(20)
             make.top.equalToSuperview().offset(20)
             make.bottom.equalToSuperview().offset(20)
