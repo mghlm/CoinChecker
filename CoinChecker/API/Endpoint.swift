@@ -28,17 +28,3 @@ extension Endpoint {
         return URLRequest(url: urlComponent.url!)
     }
 }
-
-enum CoinEndpoint: Endpoint {
-    var baseUrl: String {
-        return "https://api.coinmarketcap.com"
-    }
-    
-    var path: String {
-        return "/v1/ticker"
-    }
-    
-    var queryItems: [URLQueryItem] {
-        return []
-    }
-}
