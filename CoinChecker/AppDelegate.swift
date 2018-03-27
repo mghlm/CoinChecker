@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        window?.rootViewController = UINavigationController(rootViewController: UIViewController())
+        window?.rootViewController = UINavigationController(rootViewController: CoinTableViewController())
 
         return true
     }
