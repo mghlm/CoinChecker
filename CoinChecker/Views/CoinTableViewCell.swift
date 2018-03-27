@@ -1,5 +1,5 @@
 //
-//  CoinCell.swift
+//  CoinTableViewCell.swift
 //  CoinChecker
 //
 //  Created by magnus holm on 27/03/2018.
@@ -9,23 +9,24 @@
 import UIKit
 import SnapKit 
 
-class CoinCell: UITableViewCell {
+class CoinTableViewCell: UITableViewCell {
     
     // MARK: - Private properties
     
     fileprivate var coinLogo: UIImageView!
     fileprivate var nameLabel: UILabel!
     fileprivate var priceLabel: UILabel!
+    
+    var identifier = "CoinTableViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setupUI()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
     }
     
     // MARK: - Private methods
@@ -40,9 +41,12 @@ class CoinCell: UITableViewCell {
     }
     
     fileprivate func setupConstraints() {
-        
-        
-        
+        nameLabel.snp.makeConstraints { (make) in
+            make.height.equalTo(20)
+            make.leading.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(20)
+            make.bottom.equalToSuperview().offset(20)
+        }
     }
 
 }
