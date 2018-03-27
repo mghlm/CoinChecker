@@ -16,17 +16,26 @@ class CoinTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(CoinTableViewCell.self, forCellReuseIdentifier: "CoinTableViewCell")
-        tableView.separatorStyle = .none 
-        tableView.reloadData()
+        setupUI()
     }
 
     // MARK: - Table view data source
+    
+    fileprivate func setupUI() {
+        tableView.backgroundColor = .gray
+        tableView.register(CoinTableViewCell.self, forCellReuseIdentifier: "CoinTableViewCell")
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsetsMake(10, 0, 10, 0)
+        tableView.reloadData()
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coinsCollection.count
     }

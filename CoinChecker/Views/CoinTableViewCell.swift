@@ -34,7 +34,7 @@ class CoinTableViewCell: UITableViewCell {
     
     fileprivate func setupUI() {
         cellView = UIView(frame: CGRect.zero)
-        cellView.backgroundColor = .gray
+        cellView.backgroundColor = .white
         cellView.layer.cornerRadius = 15
         addSubview(cellView)
         

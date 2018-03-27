@@ -24,3 +24,25 @@ protocol APIClient {
     var session: URLSession { get }
     func fetch<V: Codable>(with request: URLRequest, completion: @escaping (Either<V, APIError>) -> Void)
 }
+
+extension APIClient {
+    func fetch<V: Codable>(with request: URLRequest, completion: @escaping (Either<V, APIError>) -> Void) {
+        let task = session.dataTask(with: request) { (data, response, error) in
+            guard error == nil else {
+                completion(.error(.apiError))
+                return
+            }
+            guard let response = response as? HTTPURLResponse, 200..<299 ~= response.statusCode else {
+                completion(.error(.jsonResponse))
+                return
+            }
+            guard let value = try? JSONDecoder().decode(V.self, from: data!) else {
+                completion(.error(.jsonDecoder))
+                return
+            }
+            
+            completion(.value(value))
+        }
+        task.resume()
+    }
+}
